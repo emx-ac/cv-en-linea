@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #8a2be2, #6a5acd, #9370db);
+            background-size: 200% 200%;
+            animation: gradientMove 6s infinite alternate;
+            position: relative;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .welcome-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .welcome-container h1 {
+            color: #4b0082;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-container p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #8a2be2;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #6a1db8;
+            transform: scale(1.05);
+        }
+
+        .background-symbols {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .symbol {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.6;
+            animation: float 8s infinite ease-in-out;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .symbol:nth-child(odd) {
+            animation-duration: 10s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Bienvenid@  a mi CV interactivo</h1>
+        <p>Presiona el botón de abajo para ver mi curriculum</p>
+        <a href="/cv"><button class="btn">Ir al CV</button></a>
+    </div>
+
+    <div class="background-symbols">
+        <div class="symbol" style="top: 10%; left: 15%; font-size: 30px;">★</div>
+        <div class="symbol" style="top: 20%; left: 70%; font-size: 50px;">✿</div>
+        <div class="symbol" style="top: 50%; left: 40%; font-size: 40px;">☾</div>
+        <div class="symbol" style="top: 80%; left: 10%; font-size: 35px;">❉</div>
+        <div class="symbol" style="top: 70%; left: 90%; font-size: 25px;">✧</div>
+        <div class="symbol" style="top: 30%; left: 20%; font-size: 45px;">♥</div>
+        <div class="symbol" style="top: 15%; left: 80%; font-size: 50px;">☀</div>
+        <div class="symbol" style="top: 60%; left: 60%; font-size: 40px;">♬</div>
+    </div>
+</body>
+</html>
+
